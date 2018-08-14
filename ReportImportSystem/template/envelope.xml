@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<envelope>
+    <header>
+        <authen>
+            <!--安全信息-->
+            <service>100008</service>
+            <!--纳税人识别号-->
+            <nsrsbh>91350203MA2XTLL347</nsrsbh>
+            <!--纳税人名称-->
+            <nsrmc>厦门馥蕾餐饮管理有限公司</nsrmc>
+            <!--授权码-->
+            <license>7fdd4b67ce41e9c916172dfd0499b8ad</license>
+            <!--交易流水，比如GUID-->
+            <sequence>c4ca4238a0b923820dcc509a6f75849b</sequence>
+            <!--时间戳（第三方系统调用接口的时间），格式：yyyyMMddHH24missSSS-->
+            <timestamp>20111028153121100</timestamp>
+        </authen>
+    </header>
+    <body>
+        <!--业务信息-->
+        <logic>
+            <!--操作类型（0新增、1变更）-->
+            <czlx>0</czlx>
+            <!--所属期起-->
+            <sssq_q></sssq_q>
+            <!--所属期止-->
+            <sssq_z></sssq_z>
+            <!--申报报表的xml，尖括号需要转义-->
+            <cjbbxml></cjbbxml>
+        </logic>
+    </body>
+</envelope>

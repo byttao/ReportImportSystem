@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://cwxx.webservice.cwbb.syncsoft.com/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="CwxxWsServiceService" targetNamespace="http://cwxx.webservice.cwbb.syncsoft.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema targetNamespace="http://ws.syncsoft.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="wssbXml" type="xs:string" />
+    </xs:schema>
+    <xs:schema xmlns:ns1="http://ws.syncsoft.com/" elementFormDefault="unqualified" targetNamespace="http://cwxx.webservice.cwbb.syncsoft.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://ws.syncsoft.com/" />
+      <xs:element name="receiveXmlWebservice" type="tns:receiveXmlWebservice" />
+      <xs:element name="receiveXmlWebserviceResponse" type="tns:receiveXmlWebserviceResponse" />
+      <xs:complexType name="receiveXmlWebservice">
+        <xs:sequence>
+          <xs:element minOccurs="0" ref="ns1:wssbXml" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="receiveXmlWebserviceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="receiveXmlWebservice">
+    <wsdl:part name="parameters" element="tns:receiveXmlWebservice" />
+  </wsdl:message>
+  <wsdl:message name="receiveXmlWebserviceResponse">
+    <wsdl:part name="parameters" element="tns:receiveXmlWebserviceResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICwxxWsService">
+    <wsdl:operation name="receiveXmlWebservice">
+      <wsdl:input name="receiveXmlWebservice" message="tns:receiveXmlWebservice" />
+      <wsdl:output name="receiveXmlWebserviceResponse" message="tns:receiveXmlWebserviceResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CwxxWsServiceServiceSoapBinding" type="tns:ICwxxWsService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="receiveXmlWebservice">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="receiveXmlWebservice">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="receiveXmlWebserviceResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CwxxWsServiceService">
+    <wsdl:port name="CwxxWsServicePort" binding="tns:CwxxWsServiceServiceSoapBinding">
+      <soap:address location="http://218.5.84.81:7002/cwbbservice/service/cwxxWsService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
