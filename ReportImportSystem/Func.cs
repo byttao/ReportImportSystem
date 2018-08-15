@@ -23,6 +23,20 @@ namespace ReportImportSystem
         {
             return OriginalStr.Replace("&", "&amp;").Replace("<", "&lt;").Replace(">", "&gt;").Replace("\"", "&quot;").Replace("'", "&apos;");
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="XDEnvelope"></param>
+        /// <param name="service"></param>
+        /// <param name="nsrsbh"></param>
+        /// <param name="nsrmc"></param>
+        /// <param name="license"></param>
+        /// <param name="sequence"></param>
+        /// <param name="timestamp"></param>
+        /// <param name="czlx"></param>
+        /// <param name="sssq_q"></param>
+        /// <param name="sssq_z"></param>
+        /// <returns></returns>
         public static string ProduceEnvelopeBody(XDocument XDEnvelope, string service, string nsrsbh, string nsrmc, string license, string sequence, string timestamp, string czlx, string sssq_q, string sssq_z)
         {
             XElement XEauthen = XDEnvelope.Element("envelope").Element("header").Element("authen");
