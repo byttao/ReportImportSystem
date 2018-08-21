@@ -71,6 +71,16 @@ namespace ReportImportSystem.Properties {
         }
         
         /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap publish_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("publish_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&lt;envelope&gt;&lt;header&gt;&lt;authen&gt;&lt;service&gt;100010&lt;/service&gt;&lt;nsrsbh&gt;admin&lt;/nsrsbh&gt;&lt;nsrmc&gt;nsrmc&lt;/nsrmc&gt;&lt;license&gt;123&lt;/license&gt;&lt;sequence&gt;c4ca4238a0b923820dcc509a6f75849b&lt;/sequence&gt;&lt;timestamp&gt;20111028153121100&lt;/timestamp&gt;&lt;/authen&gt;&lt;/header&gt;&lt;body&gt;&lt;logic&gt;&lt;czlx&gt;0&lt;/czlx&gt;&lt;sssq_q&gt;&lt;/sssq_q&gt;&lt;sssq_z&gt;&lt;/sssq_z&gt;&lt;cjbbxml&gt;&lt;?xml version=&quot;1.0&quot; encoding=&quot;GB2312&quot; standalone=&quot;yes&quot;?&gt;&lt;taxML xmlns=&quot;http://www.chinatax.gov.cn/dataspec/&quot;&gt;&lt;syxqyzcfzb&gt;&lt;nsrxxForm1&gt;&lt;nsrsbh&gt;&lt;/nsrsbh&gt;&lt;nsrmc&gt;&lt;/nsrmc&gt;&lt;bsrq&gt;YYYY-MM- [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         internal static string String1 {

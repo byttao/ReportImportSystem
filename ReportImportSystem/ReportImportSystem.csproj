@@ -37,8 +37,13 @@
     <Reference Include="DevExpress.Utils.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
       <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NPOI, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
       <HintPath>..\packages\NPOI.2.3.0\lib\net40\NPOI.dll</HintPath>
@@ -84,6 +89,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QYcollection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QYcollection.Designer.cs">
+      <DependentUpon>QYcollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QYitem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QYitem.Designer.cs">
+      <DependentUpon>QYitem.cs</DependentUpon>
+    </Compile>
     <Compile Include="ScreenStart.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +133,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="QYcollection.resx">
+      <DependentUpon>QYcollection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QYitem.resx">
+      <DependentUpon>QYitem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ScreenStart.resx">
       <DependentUpon>ScreenStart.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,6 +149,9 @@
       <DependentUpon>XtraFormItem.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="BBLX.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Connected Services\cwxxWsService\CwxxWsServiceService.wsdl" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -137,6 +163,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="QY.Json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="template\小企业会计准则财务报表.xls">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -162,6 +191,7 @@
   <ItemGroup>
     <None Include="Resources\textbox_32x32.png" />
     <None Include="Resources\card_32x32.png" />
+    <None Include="Resources\publish_32x32.png" />
     <Content Include="template\100008.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

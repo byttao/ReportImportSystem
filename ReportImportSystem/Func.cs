@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Xml.Linq;
+using NPOI.SS.UserModel;
 
 namespace ReportImportSystem
 {
@@ -117,6 +118,22 @@ namespace ReportImportSystem
             string result = rxw.receiveXmlWebservice(envelopeStr);
             return result;
             //return envelopeStr;
+        }
+
+        public static string GetString(ICell cell)
+        {
+            if (cell == null)
+                return "";
+            switch (cell.CellType)
+            {
+                case CellType.Blank: //BLANK:  
+                case CellType.Error: //ERROR:  
+                    return "";
+                case CellType.String: //STRING:  
+                    return cell.StringCellValue;
+                default:
+                    return cell.NumericCellValue.ToString();
+            }
         }
     }
 }

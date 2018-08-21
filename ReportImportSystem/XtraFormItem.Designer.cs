@@ -38,6 +38,8 @@
             this.customersTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.navigationFrame = new DevExpress.XtraBars.Navigation.NavigationFrame();
             this.BBSBNavigationPage = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.SBLX = new DevExpress.XtraEditors.ToggleSwitch();
             this.btnUpload = new DevExpress.XtraEditors.SimpleButton();
@@ -47,17 +49,18 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.SBQX = new DevExpress.XtraEditors.ToggleSwitch();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.buttonEdit1 = new DevExpress.XtraEditors.ButtonEdit();
+            this.DRLJ = new DevExpress.XtraEditors.ButtonEdit();
             this.SSQQ = new DevExpress.XtraEditors.DateEdit();
             this.customersNavigationPage = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.customersLabelControl = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.navigationFrame)).BeginInit();
             this.navigationFrame.SuspendLayout();
             this.BBSBNavigationPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SBLX.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SSQZ.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SBQX.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DRLJ.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SSQQ.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SSQQ.Properties)).BeginInit();
             this.customersNavigationPage.SuspendLayout();
@@ -149,6 +152,8 @@
             // 
             // BBSBNavigationPage
             // 
+            this.BBSBNavigationPage.Controls.Add(this.textEdit1);
+            this.BBSBNavigationPage.Controls.Add(this.labelControl6);
             this.BBSBNavigationPage.Controls.Add(this.labelControl5);
             this.BBSBNavigationPage.Controls.Add(this.SBLX);
             this.BBSBNavigationPage.Controls.Add(this.btnUpload);
@@ -158,15 +163,33 @@
             this.BBSBNavigationPage.Controls.Add(this.labelControl2);
             this.BBSBNavigationPage.Controls.Add(this.SBQX);
             this.BBSBNavigationPage.Controls.Add(this.labelControl1);
-            this.BBSBNavigationPage.Controls.Add(this.buttonEdit1);
+            this.BBSBNavigationPage.Controls.Add(this.DRLJ);
             this.BBSBNavigationPage.Controls.Add(this.SSQQ);
             this.BBSBNavigationPage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BBSBNavigationPage.Name = "BBSBNavigationPage";
             this.BBSBNavigationPage.Size = new System.Drawing.Size(902, 409);
             // 
+            // textEdit1
+            // 
+            this.textEdit1.Location = new System.Drawing.Point(103, 31);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Properties.ReadOnly = true;
+            this.textEdit1.Size = new System.Drawing.Size(233, 24);
+            this.textEdit1.TabIndex = 12;
+            this.textEdit1.EditValueChanged += new System.EventHandler(this.textEdit1_EditValueChanged);
+            this.textEdit1.Click += new System.EventHandler(this.textEdit1_Click);
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Location = new System.Drawing.Point(37, 34);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(60, 17);
+            this.labelControl6.TabIndex = 11;
+            this.labelControl6.Text = "报表类型：";
+            // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(318, 29);
+            this.labelControl5.Location = new System.Drawing.Point(331, 85);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(60, 17);
             this.labelControl5.TabIndex = 10;
@@ -174,7 +197,7 @@
             // 
             // SBLX
             // 
-            this.SBLX.Location = new System.Drawing.Point(384, 25);
+            this.SBLX.Location = new System.Drawing.Point(397, 81);
             this.SBLX.Name = "SBLX";
             this.SBLX.Properties.OffText = "新增申报";
             this.SBLX.Properties.OnText = "更正申报";
@@ -183,15 +206,17 @@
             // 
             // btnUpload
             // 
+            this.btnUpload.ImageOptions.Image = global::ReportImportSystem.Properties.Resources.publish_32x32;
             this.btnUpload.Location = new System.Drawing.Point(441, 244);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(161, 39);
             this.btnUpload.TabIndex = 8;
             this.btnUpload.Text = "提交";
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
             // SSQZ
             // 
-            this.SSQZ.Location = new System.Drawing.Point(384, 73);
+            this.SSQZ.Location = new System.Drawing.Point(397, 129);
             this.SSQZ.Name = "SSQZ";
             this.SSQZ.Properties.ReadOnly = true;
             this.SSQZ.Size = new System.Drawing.Size(132, 24);
@@ -199,7 +224,7 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(318, 76);
+            this.labelControl4.Location = new System.Drawing.Point(331, 132);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(60, 17);
             this.labelControl4.TabIndex = 6;
@@ -207,7 +232,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(24, 29);
+            this.labelControl3.Location = new System.Drawing.Point(37, 85);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(60, 17);
             this.labelControl3.TabIndex = 5;
@@ -215,7 +240,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(24, 76);
+            this.labelControl2.Location = new System.Drawing.Point(37, 132);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(60, 17);
             this.labelControl2.TabIndex = 4;
@@ -223,7 +248,7 @@
             // 
             // SBQX
             // 
-            this.SBQX.Location = new System.Drawing.Point(90, 25);
+            this.SBQX.Location = new System.Drawing.Point(103, 81);
             this.SBQX.Name = "SBQX";
             this.SBQX.Properties.OffText = "季度申报";
             this.SBQX.Properties.OnText = "年度申报";
@@ -233,25 +258,26 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(24, 129);
+            this.labelControl1.Location = new System.Drawing.Point(37, 185);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(60, 17);
             this.labelControl1.TabIndex = 1;
             this.labelControl1.Text = "导入路径：";
             // 
-            // buttonEdit1
+            // DRLJ
             // 
-            this.buttonEdit1.Location = new System.Drawing.Point(90, 126);
-            this.buttonEdit1.Name = "buttonEdit1";
-            this.buttonEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.DRLJ.Location = new System.Drawing.Point(103, 182);
+            this.DRLJ.Name = "DRLJ";
+            this.DRLJ.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.buttonEdit1.Size = new System.Drawing.Size(512, 24);
-            this.buttonEdit1.TabIndex = 0;
+            this.DRLJ.Size = new System.Drawing.Size(512, 24);
+            this.DRLJ.TabIndex = 0;
+            this.DRLJ.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.DRLJ_ButtonClick);
             // 
             // SSQQ
             // 
             this.SSQQ.EditValue = null;
-            this.SSQQ.Location = new System.Drawing.Point(90, 73);
+            this.SSQQ.Location = new System.Drawing.Point(103, 129);
             this.SSQQ.Name = "SSQQ";
             this.SSQQ.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -310,10 +336,11 @@
             this.navigationFrame.ResumeLayout(false);
             this.BBSBNavigationPage.ResumeLayout(false);
             this.BBSBNavigationPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SBLX.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SSQZ.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SBQX.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DRLJ.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SSQQ.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SSQQ.Properties)).EndInit();
             this.customersNavigationPage.ResumeLayout(false);
@@ -332,7 +359,7 @@
         private DevExpress.XtraBars.Navigation.NavigationPage customersNavigationPage;
         private DevExpress.XtraEditors.LabelControl customersLabelControl;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.ButtonEdit buttonEdit1;
+        private DevExpress.XtraEditors.ButtonEdit DRLJ;
         private DevExpress.XtraEditors.DateEdit SSQQ;
         private DevExpress.XtraEditors.TextEdit SSQZ;
         private DevExpress.XtraEditors.LabelControl labelControl4;
@@ -342,5 +369,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.ToggleSwitch SBLX;
         private DevExpress.XtraEditors.SimpleButton btnUpload;
+        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.LabelControl labelControl6;
     }
 }

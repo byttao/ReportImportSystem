@@ -102,4 +102,29 @@ namespace ReportImportSystem
             }
         }
     }
+
+
+    public class QYC
+    {
+        public QY[] Property1 { get; set; }
+    }
+
+    public class QY
+    {
+        public string MC { get; set; }
+        public string SH { get; set; }
+        public string MM { get; set; }
+        public string SQM { get; set; }
+        public string BBLX { get; set; }
+    }
+
+    public class BBLX
+    {
+        public string MC { get; set; }
+        public string JB { get; set; }
+        public string NB { get; set; }
+    }
+
+
+
 }
